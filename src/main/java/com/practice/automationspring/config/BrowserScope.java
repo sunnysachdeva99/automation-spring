@@ -19,7 +19,7 @@ public class BrowserScope extends SimpleThreadScope {
             super.remove(name);
             object= super.get(name,objectFactory);
         }
-        return  null;
+        return  object;
     }
 
     public void registerDestructionCallback(String name, Runnable callback) {

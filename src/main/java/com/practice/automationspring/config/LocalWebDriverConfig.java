@@ -29,7 +29,6 @@ public class LocalWebDriverConfig {
     @ThreadScopeBean
     @ConditionalOnProperty(name="browser", havingValue = "firefox")
     //@ConditionalOnExpression("${browser} =firefox")
-    @Bean
     public WebDriver getFirefoxDriver(){
         WebDriverManager.firefoxdriver().setup();
         return new FirefoxDriver();
@@ -39,7 +38,6 @@ public class LocalWebDriverConfig {
 
    // @Qualifier("chrome")
    @ThreadScopeBean
-    @Bean
     @ConditionalOnMissingBean
    // @ConditionalOnProperty(name="browser", havingValue = "chrome")
    // @ConditionalOnExpression("${browser} =chrome")
