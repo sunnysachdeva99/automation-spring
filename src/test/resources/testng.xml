@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Spring-boot" verbose="1" parallel="tests" >
+    <test name="test-1" >
+        <classes>
+            <class name="com.practice.automationspring.googleTests.Google1Test" />
+        </classes>
+    </test>
+
+    <test name="test -2">
+        <classes>
+            <class name="com.practice.automationspring.googleTests.Google2Test" />
+        </classes>
+    </test>
+</suite>
