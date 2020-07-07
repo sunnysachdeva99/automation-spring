@@ -2,6 +2,7 @@ package com.practice.automationspring.config;
 
 
 import com.practice.automationspring.annotations.LazyConfiguration;
+import com.practice.automationspring.annotations.ThreadScopeBean;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -24,7 +25,7 @@ public class RemoteWebDriverConfig {
     @Value("${selenium.grid.url}")
     private URL url;
 
-    @Bean
+    @ThreadScopeBean
     @ConditionalOnProperty(name="browser", havingValue = "firefox")
     public WebDriver remoteFirefoxDriver(){
         DesiredCapabilities dc = DesiredCapabilities.firefox();
@@ -32,7 +33,7 @@ public class RemoteWebDriverConfig {
     }
 
 
-    @Bean
+    @ThreadScopeBean
     @ConditionalOnMissingBean
     public WebDriver remoteChromeDriver(){
         DesiredCapabilities dc = DesiredCapabilities.chrome();
