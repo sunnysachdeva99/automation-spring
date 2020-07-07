@@ -36,5 +36,5 @@ mvnw
 mvnw.cmd
 automation-spring.iml
 Help.md
-
+src/test/resources/Screenshots/*.png
 
