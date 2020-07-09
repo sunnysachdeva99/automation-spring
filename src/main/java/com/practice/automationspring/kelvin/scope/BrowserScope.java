@@ -1,11 +1,10 @@
-package com.practice.automationspring.config;
+package com.practice.automationspring.kelvin.scope;
 
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.context.support.SimpleThreadScope;
 
-import java.util.Map;
 import java.util.Objects;
 
 public class BrowserScope extends SimpleThreadScope {

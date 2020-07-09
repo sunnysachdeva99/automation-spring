@@ -2,7 +2,7 @@ package com.practice.automationspring.googleTests;
 
 import com.google.common.util.concurrent.Uninterruptibles;
 import com.practice.automationspring.page.google.GooglePage;
-import com.practice.automationspring.util.ScreenshotUtil;
+import com.practice.automationspring.kelvin.service.ScreenshotUtil;
 import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
@@ -31,5 +31,6 @@ public class Google2Test extends BaseTest {
         Assert.assertTrue(this.googlePage.getSearchResult().isAt());
         Assert.assertTrue(this.googlePage.getSearchResult().getCount()>2);
        this.screenshotUtil.takeScreenshot();
+        this.googlePage.close();
     }
 }

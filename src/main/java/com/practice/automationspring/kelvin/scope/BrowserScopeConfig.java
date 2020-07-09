@@ -1,4 +1,4 @@
-package com.practice.automationspring.config;
+package com.practice.automationspring.kelvin.scope;
 
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.context.annotation.Bean;

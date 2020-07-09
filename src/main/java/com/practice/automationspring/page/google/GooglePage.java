@@ -1,14 +1,11 @@
 package com.practice.automationspring.page.google;
 
 
-import com.practice.automationspring.annotations.LazyPage;
+import com.practice.automationspring.kelvin.annotations.LazyPage;
 import com.practice.automationspring.page.BasePage;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
 
 @Data

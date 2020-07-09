@@ -1,28 +1,24 @@
-package com.practice.automationspring.util;
+package com.practice.automationspring.kelvin.service;
 
 import com.github.javafaker.Faker;
-import com.practice.automationspring.annotations.LazyConfiguration;
-import com.practice.automationspring.config.FakerConfig;
+import com.practice.automationspring.kelvin.annotations.LazyConfiguration;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.stereotype.Component;
+import org.springframework.context.ApplicationContext;
 import org.springframework.util.FileCopyUtils;
-
-import javax.annotation.PostConstruct;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 
 @LazyConfiguration
-public class ScreenshotUtil {
+public class ScreenshotService {
 
     @Autowired
-    private TakesScreenshot driver;
-
+    //private TakesScreenshot driver;
+    private ApplicationContext context;
     @Value("${screenshot.path}")
     private Path path;
 
@@ -30,7 +26,7 @@ public class ScreenshotUtil {
     private Faker faker;
 
     public void takeScreenshot() throws IOException {
-       File sourceFile = this.driver.getScreenshotAs(OutputType.FILE);
+       File sourceFile = this.context.getBean(TakesScreenshot.class).getScreenshotAs(OutputType.FILE);
         FileCopyUtils.copy(sourceFile,this.path.resolve(faker.name().firstName()+".png").toFile());
     }
 
