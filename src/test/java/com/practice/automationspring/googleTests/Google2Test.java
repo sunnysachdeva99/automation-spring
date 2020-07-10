@@ -1,8 +1,9 @@
 package com.practice.automationspring.googleTests;
 
 import com.google.common.util.concurrent.Uninterruptibles;
+import com.practice.automationspring.kelvin.annotations.LazyAutowired;
+import com.practice.automationspring.kelvin.service.ScreenshotService;
 import com.practice.automationspring.page.google.GooglePage;
-import com.practice.automationspring.kelvin.service.ScreenshotUtil;
 import org.junit.Assert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
@@ -15,12 +16,11 @@ import java.util.concurrent.TimeUnit;
 public class Google2Test extends BaseTest {
 
 
-    @Autowired
+    @LazyAutowired
     private GooglePage googlePage;
 
-    @Autowired
-    @Lazy
-    private ScreenshotUtil screenshotUtil;
+    @LazyAutowired
+    private ScreenshotService screenshotUtil;
 
     @Test
     public void googleTests() throws IOException {

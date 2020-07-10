@@ -1,8 +1,7 @@
 package com.practice.automationspring.kelvin.service;
 
 import com.github.javafaker.Faker;
-import com.practice.automationspring.kelvin.annotations.LazyConfiguration;
-
+import com.practice.automationspring.kelvin.annotations.LazyService;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 
-@LazyConfiguration
+@LazyService
 public class ScreenshotService {
 
     @Autowired

@@ -2,8 +2,9 @@ package com.practice.automationspring.googleTests;
 
 import com.google.common.util.concurrent.Uninterruptibles;
 import com.practice.automationspring.kelvin.annotations.LazyAutowired;
+import com.practice.automationspring.kelvin.service.ScreenshotService;
 import com.practice.automationspring.page.google.GooglePage;
-import com.practice.automationspring.kelvin.service.ScreenshotUtil;
+
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
@@ -19,7 +20,7 @@ public class Google1Test extends BaseTest {
     private GooglePage googlePage;
 
     @LazyAutowired
-    private ScreenshotUtil screenshotUtil;
+    private ScreenshotService screenshotUtil;
 
     @Test
     public void googleTests() throws IOException {

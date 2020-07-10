@@ -1,4 +1,4 @@
-package com.practice.automationspring.config;
+package com.practice.automationspring.kelvin.config;
 
 
 import com.practice.automationspring.kelvin.annotations.LazyConfiguration;
@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.*;
 
@@ -34,9 +35,9 @@ public class LocalWebDriverConfig {
 
    // @Qualifier("chrome")
    @ThreadScopeBean
-   // @ConditionalOnMissingBean
+   @ConditionalOnMissingBean
    // @ConditionalOnProperty(name="browser", havingValue = "chrome")
-    @ConditionalOnExpression("${browser} =chrome")
+    //@ConditionalOnExpression("${browser} =chrome")
     public WebDriver getChromeDriver(){
         WebDriverManager.chromedriver().setup();
         return new ChromeDriver();

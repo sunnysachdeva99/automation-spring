@@ -1,4 +1,4 @@
-package com.practice.automationspring.config;
+package com.practice.automationspring.kelvin.config;
 
 
 import com.practice.automationspring.kelvin.annotations.LazyConfiguration;
