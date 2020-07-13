@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-@PropertySource("classpath:data/language/en.properties")
+@PropertySource("classpath:data/language/${app.locale}.properties")
 @Getter
 public class FlightAppDetails {
 
