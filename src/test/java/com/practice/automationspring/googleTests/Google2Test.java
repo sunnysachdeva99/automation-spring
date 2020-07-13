@@ -1,12 +1,11 @@
 package com.practice.automationspring.googleTests;
 
 import com.google.common.util.concurrent.Uninterruptibles;
+import com.practice.automationspring.BaseTest;
 import com.practice.automationspring.kelvin.annotations.LazyAutowired;
 import com.practice.automationspring.kelvin.service.ScreenshotService;
 import com.practice.automationspring.page.google.GooglePage;
 import org.junit.Assert;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.testng.annotations.Test;
 
 import java.io.IOException;

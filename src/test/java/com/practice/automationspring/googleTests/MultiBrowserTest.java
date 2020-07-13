@@ -1,5 +1,6 @@
 package com.practice.automationspring.googleTests;
 
+import com.practice.automationspring.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;

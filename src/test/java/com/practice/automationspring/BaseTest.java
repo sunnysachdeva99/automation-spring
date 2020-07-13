@@ -1,4 +1,4 @@
-package com.practice.automationspring.googleTests;
+package com.practice.automationspring;
 
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;

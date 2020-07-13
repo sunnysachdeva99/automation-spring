@@ -1,6 +1,7 @@
 package com.practice.automationspring.googleTests;
 
 import com.google.common.util.concurrent.Uninterruptibles;
+import com.practice.automationspring.BaseTest;
 import com.practice.automationspring.kelvin.annotations.LazyAutowired;
 import com.practice.automationspring.kelvin.service.ScreenshotService;
 import com.practice.automationspring.page.google.GooglePage;

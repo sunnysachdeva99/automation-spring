@@ -1,10 +1,8 @@
 package com.practice.automationspring.googleTests.props;
 
-import com.practice.automationspring.googleTests.BaseTest;
+import com.practice.automationspring.BaseTest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
-import org.springframework.core.io.support.PropertiesLoaderSupport;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 import org.testng.annotations.Test;
 

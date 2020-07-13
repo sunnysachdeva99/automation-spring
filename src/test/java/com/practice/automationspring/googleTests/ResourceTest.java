@@ -1,5 +1,6 @@
 package com.practice.automationspring.googleTests;
 
+import com.practice.automationspring.BaseTest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.testng.annotations.Test;
@@ -7,7 +8,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.nio.file.Files;
 
-public class ResourceTest extends BaseTest{
+public class ResourceTest extends BaseTest {
 
     @Value("classpath:data/testdata.csv")
     private Resource resource;
